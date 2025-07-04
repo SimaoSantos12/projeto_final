@@ -1,27 +1,67 @@
-Projeto de Otimização da Recolha de Resíduos Urbanos – Município de Cascais
+# 🗑️ Otimização de Rotas de Recolha de Lixo
 
-Desenvolvi um projeto com foco na melhoria da eficiência logística da recolha de resíduos sólidos urbanos, combinando técnicas de machine learning com otimização de rotas.
+Este repositório contém o projeto de final de curso de **Engenharia Informática e Telecomunicações**, desenvolvido na **Escola Superior de Tecnologia e Gestão de Lamego** 
 
-Principais componentes do projeto:
+## 📋 Descrição
 
-  Análise exploratória de dados operacionais de recolha (mais de 500 mil registos);
+Este projeto tem como objetivo otimizar as rotas de recolha de resíduos sólidos urbanos no município de Cascais, de forma a melhorar a eficiência logística e reduzir o impacto ambiental.
 
-  Desenvolvimento de um modelo preditivo (HistGradientBoostingRegressor) para estimar o nível de enchimento de contentores;
+A solução proposta baseia-se em três pilares fundamentais:
+1. **Análise de Dados Reais** dos contentores e recolhas.
+2. **Modelação Preditiva** dos níveis de enchimento usando Machine Learning.
+3. **Otimização de Rotas** com recurso ao **solver PyVRP**.
 
-  Implementação de um solver (PyVRP) para criar rotas de recolha otimizadas com base nas previsões;
+## 📊 Principais Funcionalidades
 
-  Comparação com abordagens tradicionais (ex. estimativa com taxa mediana);
+- Previsão dos níveis de enchimento dos contentores (papel, embalagens, vidro).
+- Otimização de rotas com base em previsões.
+- Comparação entre diferentes abordagens (rotas reais vs. preditivas).
+- Visualização de resultados através de **dashboards interativos**.
+- Cálculo de indicadores como:
+  - Quantidade de lixo não recolhido.
+  - Distância percorrida.
+  - Eficiência das rotas geradas.
 
-  Desenvolvimento de um dashboard interativo (Streamlit) para visualização geográfica, análise de dados e rotas.
+## 🧠 Técnicas e Tecnologias
 
-Resultados:
+- **Linguagens**: Python
+- **Bibliotecas**:
+  - `scikit-learn` (Modelos Preditivos)
+  - `pandas`, `numpy` (Tratamento de Dados)
+  - `matplotlib`, `seaborn` (Visualização)
+  - `folium`, `plotly`, `dash` (Dashboard interativo)
+  - `PyVRP` (Solver para Vehicle Routing Problem)
 
-  Aumento da precisão na previsão dos níveis de enchimento (>40% face ao método base);
+## ⚙️ Estrutura do Projeto
 
-  Melhoria na eficiência das rotas:
-   • +2% de lixo recolhido (geral)
-   • Redução de até 4,5% na distância percorrida
+📁 data/ # Dados fornecidos pelo município
+📁 notebooks/ # Cadernos de análise e desenvolvimento
+📁 src/ # Código-fonte modularizado
+📁 dashboard/ # Aplicação de visualização dos dados
+📄 requirements.txt # Dependências do projeto
+📄 README.md # Este ficheiro
 
-Rotas mais sustentáveis e com menor desperdício de recursos.
 
-Um exemplo de como a ciência de dados pode contribuir para cidades mais inteligentes e sustentáveis.
+## 🔍 Resultados
+
+- O modelo **HistGradientBoostingRegressor** foi o que apresentou melhor desempenho preditivo.
+- A utilização das previsões do modelo resultou em:
+  - Redução de 3,19% de lixo não recolhido.
+  - Redução de cerca de 400 metros em média por rota.
+- As **sub-rotas otimizadas** com previsões foram mais eficazes do que aquelas baseadas em médias históricas.
+
+## 📈 Dashboard
+
+Foi desenvolvido um **dashboard interativo** com os seguintes módulos:
+- Análise de dados históricos.
+- Visualização geográfica dos circuitos.
+- Evolução temporal dos níveis de enchimento.
+- Comparação entre rotas reais e otimizadas.
+
+
+## 👨‍💻 Autor
+
+Simão Costa Santos – Nº 25766  
+Licenciatura em Engenharia Informática e Telecomunicações  
+[ESTGL - Escola Superior de Tecnologia e Gestão de Lamego](https://www.estgl.ipv.pt)
+
